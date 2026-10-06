@@ -1,5 +1,5 @@
 // 網路優先：有網路就向伺服器確認最新版（cache: no-cache，不吃瀏覽器 10 分鐘暫存），沒網路才用快取（離線可練）
-const CACHE = "n8v5-20261007000008";
+const CACHE = "n8v5-20261007052154";
 const FILES = ["./", "index.html", "manifest.json", "icon-192.png", "icon-512.png"];
 // 安裝時強制向伺服器抓（cache: reload），不要把瀏覽器暫存裡的舊版存進來
 self.addEventListener("install", e => { self.skipWaiting(); e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES.map(f => new Request(f, {cache: "reload"}))))); });
